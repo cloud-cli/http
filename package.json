@@ -1,0 +1,29 @@
+{
+  "name": "@cloud-cli/http",
+  "version": "0.0.0",
+  "description": "Docker container management",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo true",
+    "build": "rm -rf ./dist/* && tsc"
+  },
+  "keywords": [
+    "cloudy"
+  ],
+  "license": "MIT",
+  "author": "Darlan Alves <me@darlanalv.es>",
+  "devDependencies": {
+    "@cloud-cli/typescript-config": "^1.0.1",
+    "@types/node": "^20.12.8",
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud-cli/http.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
