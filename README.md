@@ -1,22 +1,20 @@
-## DX
+# @cloud-cli/http
 
-Run Docker containers
+Wrapper for Node.js HTTP server
 
 ## Install
 
-```
-npm i @cloud-cli/dx
+```sh
+npm i @cloud-cli/http
 ```
 
 ## Usage
 
-```bash
-cy dx.list
-cy dx.prune
-cy dx.pull --image node:latest
-cy dx.add --name node-app --image node:latest --volumes 'volume:/container/path' --port '8080' --domain 'foo.example.com'
-cy dx.start --name node-app --env 'FOO=bar'
-cy dx.logs --name node-app
-cy dx.stop --name node-app
-cy dx.remove --name node-app
+```ts
+import createServer from '@cloud-cli/http';
+
+// same API as Node.JS http module. Listens to `process.env.PORT` automatically
+const server = createServer(function (request, response) {
+  // ...
+});
 ```
