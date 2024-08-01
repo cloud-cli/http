@@ -14,6 +14,9 @@
   ],
   "license": "MIT",
   "author": "Darlan Alves <me@darlanalv.es>",
+  "dependencies": {
+    "@cloud-cli/proxy": "latest"
+  },
   "devDependencies": {
     "@cloud-cli/typescript-config": "^1.0.1",
     "@types/node": "^20.12.8",
