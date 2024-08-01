@@ -1,12 +1,12 @@
-import { loadConfig, ProxyServer } from '@cloud-cli/proxy';
+import { loadConfig, ProxyServer, ProxySettings } from '@cloud-cli/proxy';
 import { IncomingMessage, ServerResponse, createServer } from 'http';
 
-export default function (handler: (request: IncomingMessage, response: ServerResponse) => any) {
+export default async function (handler: (request: IncomingMessage, response: ServerResponse) => any) {
   let server;
-  const config = loadConfig('', true);
+  const config = await loadConfig('', true);
 
   if (config) {
-    const proxy = new ProxyServer({
+    const proxy = new ProxyServer(<ProxySettings>{
       ...config,
       enableDebug: true,
       fallback: handler,
